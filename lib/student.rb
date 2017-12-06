@@ -45,7 +45,7 @@ class Student
     FROM students
     WHERE name = ?
     SQL
-    row = DB[:conn].execute(sql, name)[0]
+    row = DB[:conn].execute(sql, name)[1]
     student.new(row[0], row[1], row[2])
   end
 
