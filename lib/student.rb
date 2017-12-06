@@ -28,7 +28,7 @@ class Student
   end
 
   def self.create(name, grade)
-    student = student.new(name, grade)
+    student = Student.new(name, grade)
     student.save
     student
   end
@@ -47,10 +47,6 @@ class Student
     row = DB[:conn].execute(sql, name)[0]
     student.new(row[0], row[1], row[2])
   end
-
-
-
-
 
   def update
     sql = <<-SQL
