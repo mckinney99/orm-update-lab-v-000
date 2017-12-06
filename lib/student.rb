@@ -45,8 +45,8 @@ class Student
     FROM students
     WHERE name = ?
     SQL
-    row = DB[:conn].execute(sql, name)[2]
-    student.new(row[0], row[1], row[2])
+    row = DB[:conn].execute(sql, name)[0]
+    Student.new(row[0], row[1], row[2])
   end
 
   def update
