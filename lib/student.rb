@@ -19,5 +19,5 @@ class Student
     )
 
     result = DB[:conn].execute(sql, self.name, self.grade)
-
+  end
 end
