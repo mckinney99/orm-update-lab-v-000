@@ -18,6 +18,6 @@ class Student
       grade INTEGER
     )
     SQL
-    result = DB[:conn].execute(sql, self.name, self.grade)
+    
   end
 end
